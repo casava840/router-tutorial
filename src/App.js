@@ -1,8 +1,8 @@
 import Home from './Home';
-import logo from './logo.svg';
 import { Link, Route, Routes } from 'react-router-dom'
 import About from './About';
-import Profile from './Profile';
+import Profiles from './Profiles';
+import HistorySample from './HistorySample';
 
 function App() {
   return (
@@ -15,17 +15,18 @@ function App() {
           <Link to="/about">소개</Link>
         </li>
         <li>
-          <Link to="/profile/casava840">casava840 프로필</Link>
+          <Link to="/profiles">프로필</Link>
         </li>
         <li>
-          <Link to="/profile/gildong">gildong 프로필</Link>
+          <Link to="/history">History 예제</Link>
         </li>
       </ul>
       <hr />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
-        <Route path='/profile/:username' element={<Profile />} />
+        <Route path='/profiles/*' element={<Profiles />} />
+        <Route path='/history' element={<HistorySample />} />
       </Routes>
     </div>
   );
