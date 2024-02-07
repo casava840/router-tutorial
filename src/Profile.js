@@ -1,6 +1,7 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
-const date = {
+const data = {
     casava840: {
         name: "강병재",
         description: "풀스택 개발자"
@@ -11,9 +12,9 @@ const date = {
     }
 };
 
-const Profile = ({ match }) => {
-    const { username } = match.params;
-    const profile = date[username];
+const Profile = () => {
+    const { username } =useParams();
+    const profile = data[username];
     if (!profile) {
         return <div>존재하지 않는 사용자입니다.</div>;
     }
