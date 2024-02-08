@@ -27,6 +27,7 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/profiles/*' element={<Profiles />} />
         <Route path='/history' element={<HistorySample />} />
+        <Route path='*' element={<div>404 Not Found</div>} />
       </Routes>
     </div>
   );
