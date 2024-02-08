@@ -1,6 +1,7 @@
 import React from "react";
-import { Link, Route, Routes } from 'react-router-dom';
+import { NavLink, Route, Routes } from 'react-router-dom';
 import Profile from "./Profile";
+import './Profiles.css';
 
 const Profiles = () => {
     return (
@@ -8,10 +9,14 @@ const Profiles = () => {
             <h3>사용자 목록</h3>
             <ul>
                 <li>
-                    <Link to="/profiles/casava840">casava840</Link>
+                    <NavLink to="/profiles/casava840" activeClassName="active">
+                        casava840
+                    </NavLink>
                 </li>
                 <li>
-                    <Link to="/profiles/gildong">gildong</Link>
+                    <NavLink to="/profiles/gildong" activeClassName="active">
+                        gildong
+                    </NavLink>
                 </li>
             </ul>
             <Routes>
